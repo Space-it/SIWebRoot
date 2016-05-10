@@ -1,6 +1,11 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top: 80px;
     padding-bottom: 20px;
+    background-image:url(Images/bg.jpg);
+    color:white;
+}
+.jumbotron{
+    background-color:rgb(9, 64, 88);
 }
 
 /* Set padding to keep content from hitting the edges */
