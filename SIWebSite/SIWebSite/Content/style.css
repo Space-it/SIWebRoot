@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Francois+One);
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Inika);
-@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 /* line 21, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -19,7 +19,7 @@
   background-origin: content-box;
   background-clip: content-box;
   background-position: left top;
-  height: 100vh;
+  
 }
 /* line 12, ../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
 #main:after {
@@ -30,20 +30,19 @@
 
 /* line 31, ../sass/_grids.scss */
 .menu_bar {
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 2px;
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
   /*background-image: url(../Content/Images/bg.jpg);*/
   background-repeat: no-repeat;
   background-size: cover;
-  /*height: 100vh;*/
-  /*background: $medium-green;*/
+  
 }
 
-/* line 42, ../sass/_grids.scss */
+/* line 43, ../sass/_grids.scss */
 .logo {
   margin-left: 5.04587%;
   width: 19.26606%;
@@ -52,21 +51,27 @@
   margin-top: 2em;
 }
 
-/* line 49, ../sass/_grids.scss */
+/* line 50, ../sass/_grids.scss */
+.mobile_logo {
+  display: none;
+}
+
+/* line 53, ../sass/_grids.scss */
 .rotate {
   background: url(../Content/Images/logotip.png) no-repeat 129% 150%;
   -webkit-transition: all .5s ease;
   border-radius: 200px;
 }
 
-/* line 54, ../sass/_grids.scss */
+/* line 58, ../sass/_grids.scss */
 .rotate:hover {
   background-position: -10% -20%;
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
 }
 
-/* line 59, ../sass/_grids.scss */
+/* line 64, ../sass/_grids.scss */
 .menu {
   width: 69.72477%;
   float: right;
@@ -78,11 +83,12 @@
   margin-bottom: 0;
 }
 
-/* line 71, ../sass/_grids.scss */
+/* line 73, ../sass/_grids.scss */
 .main_menu {
   padding-top: 5em;
   padding-bottom: 5em;
   padding-left: 1em;
+  max-height: 15em;
   margin-right: 4.7619%;
   width: 19.0184%;
   float: left;
@@ -92,12 +98,12 @@
   border-radius: 2px;
 }
 
-/* line 88, ../sass/_grids.scss */
+/* line 84, ../sass/_grids.scss */
 .main_menu:hover {
   background: rgba(255, 255, 255, 0.6);
 }
 
-/* line 93, ../sass/_grids.scss */
+/* line 87, ../sass/_grids.scss */
 .main_menu a {
   color: #fcfff5;
   font-family: 'Francois One', sans-serif;
@@ -105,7 +111,7 @@
   text-transform: uppercase;
 }
 
-/* line 100, ../sass/_grids.scss */
+/* line 93, ../sass/_grids.scss */
 .main_menu p {
   color: #fcfff5;
   font-size: 12px;
@@ -114,7 +120,12 @@
   margin-right: 0;
 }
 
-/* line 109, ../sass/_grids.scss */
+/* line 100, ../sass/_grids.scss */
+.toggle-nav {
+  display: none;
+}
+
+/* line 103, ../sass/_grids.scss */
 .slogan p {
   font-family: 'Francois One', sans-serif;
   text-transform: uppercase;
@@ -128,6 +139,103 @@
   margin-top: 2em;
 }
 
+@media screen and (max-width: 964px) {
+  /* line 115, ../sass/_grids.scss */
+  .menu_bar {
+    min-height: 390px;
+  }
+
+  /* line 118, ../sass/_grids.scss */
+  .top_bar {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    background: #fcfff5;
+  }
+
+  /* line 122, ../sass/_grids.scss */
+  .logo img {
+    display: none;
+  }
+
+  /* line 125, ../sass/_grids.scss */
+  .logo {
+    margin-left: 5.04587%;
+    width: 49.54128%;
+    float: left;
+    margin-right: 0.91743%;
+    margin-top: 20px;
+  }
+
+  /* line 130, ../sass/_grids.scss */
+  .mobile_logo {
+    display: inline;
+    color: black;
+    font-size: 2em;
+    font-family: 'Lobster';
+    letter-spacing: 1px;
+  }
+
+  /* line 137, ../sass/_grids.scss */
+  .menu {
+    display: none;
+  }
+
+  /* line 140, ../sass/_grids.scss */
+  .mobile_nav {
+    width: 10.18349%;
+    float: right;
+    margin-right: 0;
+    height: 80px;
+    background: #f7f7f7;
+  }
+
+  /* line 145, ../sass/_grids.scss */
+  .toggle-nav {
+    width: 40.54054%;
+    margin-left: 34.68468%;
+    margin-top: 25px;
+    display: inline-block;
+    border-radius: 3px;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+    color: black;
+    font-size: 25px;
+    transition: color linear 0.15s;
+    text-decoration: none;
+  }
+
+  /* line 160, ../sass/_grids.scss */
+  .toggle-nav:hover, .toggle-nav.active {
+    text-decoration: none;
+    color: #66a992;
+  }
+
+  /* line 164, ../sass/_grids.scss */
+  .slogan p {
+    margin-left: 20.18349%;
+    width: 59.63303%;
+    float: left;
+    margin-right: 0.91743%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 173, ../sass/_grids.scss */
+  .mobile_nav {
+    width: 15.22936%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 176, ../sass/_grids.scss */
+  .slogan {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 /* line 45, ../sass/_normalizer.scss */
 article,
 aside,

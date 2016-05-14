@@ -1,18 +1,12 @@
 ﻿body {
+    height:100vh;
     padding-top: 80px;
     padding-bottom: 20px;
     background-image:url(Images/bg.jpg);
+    height: 100vh;
     color:white;
 }
-.jumbotron{
-    background-color:rgb(9, 64, 88);
-}
-
 /* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
