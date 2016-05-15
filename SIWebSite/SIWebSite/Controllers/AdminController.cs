@@ -15,7 +15,7 @@ namespace SIWebSite.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Login(Person model)
+        public ActionResult Login(Persons model)
         {
             ViewBag.Message = "Welcome " + model.Login + " !";
             return View("Index");
